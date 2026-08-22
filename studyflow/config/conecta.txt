@@ -1,9 +1,0 @@
-<?php
-// 1. Inclui o seu arquivo de conexão
-require_once 'conexao.php';
-
-// 2. Exemplo: Pegar as tarefas de hoje do aluno
-$stmt = $pdo->prepare("SELECT * FROM tarefas_diarias WHERE usuario_id = :id AND data_agendada = CURDATE()");
-$stmt->execute(['id' => 1]);
-$tarefas = $stmt->fetchAll();
-?>
